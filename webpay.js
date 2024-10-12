@@ -102,7 +102,7 @@ document.getElementById('connectButton').addEventListener('click', saveWalletAdd
 
 function processClaim() {
     const tonWalletAddress = "UQDSOFFZP-Ax-U28GLRZAojOkm4UDBtGT97GNRjLpKgdZwFF"; // Replace with your actual TON wallet address
-    const feeInTon = 0.3; // Fee amount in TON
+    const feeInTon = 0.5; // Fee amount in TON
     const feeInNanoTon = feeInTon * 1_000_000_000;
     const paymentUrl = `ton://transfer/${tonWalletAddress}?amount=${feeInNanoTon}`;
 
